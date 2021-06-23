@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "741635522741",
+    "project_id": "moviesframeworkdesign",
+    "storage_bucket": "moviesframeworkdesign.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741635522741:android:b925e9ab729d42bf897efc",
+        "android_client_info": {
+          "package_name": "com.example.framework_design3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741635522741-88o7k43g5jrvgupk7d7cl9qnvm3jhcpl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh3iRVI5jlW9-Lkh0Voxi1nkWHiOkS5zQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741635522741-88o7k43g5jrvgupk7d7cl9qnvm3jhcpl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
