@@ -1,7 +1,10 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:framework_design3/Models/movie.dart';
 import 'package:framework_design3/Models/user.dart';
 import 'package:framework_design3/Notifiers/authentication_notifier.dart';
+import 'package:framework_design3/Notifiers/movie_notifier.dart';
 
 logIn(Users user, AuthenticationNotifier authenticationNotifier) async{
 
@@ -45,4 +48,17 @@ initializeCurrentUser(AuthenticationNotifier authenticationNotifier) async{
     authenticationNotifier.setUser(firebaseUser);
   }
 
+}
+
+getMovies(MovieNotifier movieNotifier) async{
+  QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection('Movies').get();
+
+  List<Movie> _movieList = [];
+
+  querySnapshot.docs.forEach((element) {
+    Movie movie = Movie.fromMap(element.data());
+    _movieList.add(movie);
+  });
+
+  movieNotifier.movieList = _movieList;
 }

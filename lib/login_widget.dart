@@ -1,3 +1,6 @@
+
+//A different approach regarding the login, using forms and changing the action based on the authMode
+
 //import 'package:framework_design3/Models/user.dart';
 //import 'package:flutter/material.dart';
 //import 'package:framework_design3/Notifiers/authentication_notifier.dart';
@@ -138,7 +141,7 @@
 //                  ),
 //                  SizedBox(height: 32),
 //                  _authMode == AuthMode.Signup ?  _buildEmailField() : Container(),
-//
+//                  _buildEmailField(),
 //                  _buildPasswordField(),
 //                  _authMode == AuthMode.Signup ? _buildConfirmPasswordField() : Container(),
 //                  SizedBox(height: 32),
@@ -192,7 +195,7 @@
 
 
 
-
+//
 import 'package:framework_design3/Models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:framework_design3/Notifiers/authentication_notifier.dart';
@@ -251,6 +254,7 @@ class _LoginState extends State<Login>{
                 decoration: InputDecoration(
                     hintText: "Please enter your password"
                 ),
+                obscureText: true,
               ),
             ),
             Container(

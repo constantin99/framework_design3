@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 //import 'package:framework_design3/LoginScreen_widget.dart';
 import 'package:framework_design3/MoviesScreen_widget.dart';
 import 'package:framework_design3/Notifiers/authentication_notifier.dart';
+import 'package:framework_design3/Notifiers/movie_notifier.dart';
 import 'package:framework_design3/functions/authentication.dart';
 import 'package:framework_design3/login_widget.dart';
 import 'package:provider/provider.dart';
@@ -18,6 +19,9 @@ void main() async {
       MultiProvider(providers: [
         ChangeNotifierProvider(
           create: (context) => AuthenticationNotifier(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => MovieNotifier(),
         ),
       ],
         child: MyApp(),
